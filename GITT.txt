@@ -1,0 +1,77 @@
+
+create a new repository on the command line
+===========================================
+
+
+
+echo "# user1" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/sathya111/user1.git
+git push -u origin master
+
+
+push an existing repository from the command line
+====================================================
+
+
+git remote add origin https://github.com/sathya111/user1.git
+git push -u origin master
+
+
+=====================================================================
+
+Create a repository in github
+#mkdir directoryname
+#cd directoryname
+directorname$
+
+
+
+
+ssh -T git@github.com======> for key authentication
+
+
+
+
+
+
+
+error1:
+git push origin branch1
+error: The requested URL returned error: 403 Forbidden while accessing https://github.com/sathya111/user1.git/info/refs
+
+fatal: HTTP request failed
+
+ANS)
+edit .git/config file under your repo directory
+find url=entry under section [remote "origin"]
+change it from url=https://MichaelDrogalis@github.com/derekerdmann/lunch_call.git to url=ssh://git@github.com/derekerdmann/lunch_call.git. that is, change all the texts before @ symbol to ssh://git
+Save config file and quit. now you could use git push origin master to sync your repo on GitHub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
